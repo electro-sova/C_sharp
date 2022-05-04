@@ -1,0 +1,93 @@
+﻿<Window x:Class="Laba_4.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba_4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="450"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="130"></RowDefinition>
+            <RowDefinition Height="130"></RowDefinition>
+            <RowDefinition Height="130"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel
+            HorizontalAlignment="Center"
+            
+            Orientation="Horizontal">
+            <materialDesign:PackIcon
+                Kind="Wikipedia"
+                Foreground="White"
+                Width="70"
+                Height="70">
+            </materialDesign:PackIcon>
+            <TextBlock
+                FontFamily="Montserrat"
+                Grid.Row="0"
+                Text="IKIPEDIA"
+                FontSize="34"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="White">
+            </TextBlock>
+        </StackPanel>
+        <Rectangle
+            Grid.Row="0"
+            Fill="#000000"
+            Panel.ZIndex="-1">
+        </Rectangle>
+        <TextBox
+            Name="login"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="22"
+            Width="283"
+            materialDesign:HintAssist.Hint="Login"
+            materialDesign:HintAssist.Foreground="#004359"
+            BorderThickness="2"
+            BorderBrush="{DynamicResource MaterialDesignDivider}"
+            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+            CaretBrush="#004359"
+            SelectionBrush="#004359"
+            Foreground="#004359" Margin="86,32,73,34">
+        </TextBox>
+        <PasswordBox
+            Name="password"
+            Grid.Row="3"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="22"
+            Width="283"
+            materialDesign:HintAssist.Hint="Password"
+            materialDesign:HintAssist.Foreground="#004359"
+            BorderThickness="2"
+            BorderBrush="{DynamicResource MaterialDesignDivider}"
+            Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+            CaretBrush="#004359"
+            SelectionBrush="#004359"
+            Foreground="#004359" Margin="87,33,72,33">
+        </PasswordBox>
+        <Button
+            Grid.Row="4"
+            Click="Button_Click"
+            FontSize="24"
+            Width="200"
+            Height="50"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Content="LogIn"
+            Style="{StaticResource MaterialDesignFlatMidBgButton}"
+            materialDesign:ButtonAssist.CornerRadius="5"
+            Background="#000000"
+            BorderBrush="#004359"
+            Cursor="Hand">
+        </Button>
+        
+    </Grid>
+</Window>
